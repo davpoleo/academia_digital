@@ -81,6 +81,6 @@ public class GlobalExceptionHandler {
                 List.of(ApiConstants.VALIDATE_ERR_UNEXPECTED, exception.getMessage()),
                 request.getRequestURI()
         );
-        return new ResponseEntity<>(errorResponseDto, HttpStatus.CONFLICT);
+        return new ResponseEntity<>(errorResponseDto, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }

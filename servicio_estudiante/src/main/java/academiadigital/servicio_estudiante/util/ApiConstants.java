@@ -15,9 +15,9 @@ public class ApiConstants {
     public static final String VALIDATE_ERR_UNEXPECTED = "Ocurrio un error inesperado";
 
     //BUSINESS ERROR MESSAGE
-    public static final String BUSINESS_ERR_ID_NOT_FOUND = "El ID: '{}' no esta registrado en el sistema";
-    public static final String BUSINESS_ERR_EMAIL_NOT_FOUND = "El email: '{}' no esta registrado en el sistema";
-    public static final String BUSINESS_ERR_DUPLICATED_EMAIL = "El email: '{}' ya esta en uso, ingrese uno nuevo.";
+    public static final String BUSINESS_ERR_ID_NOT_FOUND = "El ID no esta registrado en el sistema";
+    public static final String BUSINESS_ERR_EMAIL_NOT_FOUND = "El email no esta registrado en el sistema";
+    public static final String BUSINESS_ERR_DUPLICATED_EMAIL = "El email ya esta en uso, ingrese uno nuevo.";
 
     //CONSTANTES DEL CONTROLLER
     public static final String CONTROLLER_MAP_BASE = "/api/v1/students";
@@ -27,4 +27,8 @@ public class ApiConstants {
     public static final String CONTROLLER_MAP_GET_ALL = "/all";
     public static final String CONTROLLER_MAP_UPDATE = "/update/{id}";
     public static final String CONTROLLER_MAP_DELETE = "/delete/{id}";
+
+    //APP TRACEABILITY
+    public static final String TRACE_ID_HEADER = "X-Trace-Id";
+    public static final String TRACE_ID_MDC_KEY = "traceId";
 }
