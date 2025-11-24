@@ -36,6 +36,22 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(errorResponseDto, HttpStatus.BAD_REQUEST);
     }
 
+    @ExceptionHandler(StudentIdNotFoundException.class)
+    //Manejador para response 404
+    public ResponseEntity<ErrorResponseDto> handlerStudentIdNotFoundException(
+            StudentIdNotFoundException exception,
+            HttpServletRequest request
+    ){
+        ErrorResponseDto errorResponseDto = new ErrorResponseDto(
+                LocalDateTime.now(),
+                HttpStatus.NOT_FOUND.value(),
+                ApiConstants.STATUS_ERR_NOT_FOUD,
+                List.of(exception.getMessage()),
+                request.getRequestURI()
+        );
+        return new ResponseEntity<>(errorResponseDto, HttpStatus.NOT_FOUND);
+    }
+
     @ExceptionHandler(StudentEmailNotFoundException.class)
     //Manejador para response 404
     public ResponseEntity<ErrorResponseDto> handlerStudentEmailNotFound(
@@ -45,7 +61,7 @@ public class GlobalExceptionHandler {
         ErrorResponseDto errorResponseDto = new ErrorResponseDto(
                 LocalDateTime.now(),
                 HttpStatus.NOT_FOUND.value(),
-                ApiConstants.VALIDATE_ERR_EMAIL_NOT_FOUND,
+                ApiConstants.STATUS_ERR_NOT_FOUD,
                 List.of(exception.getMessage()),
                 request.getRequestURI()
         );
@@ -61,7 +77,7 @@ public class GlobalExceptionHandler {
         ErrorResponseDto errorResponseDto = new ErrorResponseDto(
                 LocalDateTime.now(),
                 HttpStatus.CONFLICT.value(),
-                ApiConstants.VALIDATE_ERR_DUPLICATED_RESOURCE,
+                ApiConstants.STATUS_ERR_DUPLICATED,
                 List.of(exception.getMessage()),
                 request.getRequestURI()
         );
@@ -77,7 +93,7 @@ public class GlobalExceptionHandler {
         ErrorResponseDto errorResponseDto = new ErrorResponseDto(
                 LocalDateTime.now(),
                 HttpStatus.INTERNAL_SERVER_ERROR.value(),
-                ApiConstants.VALIDATE_ERR_SERVER_ERROR,
+                ApiConstants.STATUS_ERR_SERVER,
                 List.of(ApiConstants.VALIDATE_ERR_UNEXPECTED, exception.getMessage()),
                 request.getRequestURI()
         );
