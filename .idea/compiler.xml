@@ -3,23 +3,36 @@
   <component name="CompilerConfiguration">
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
-      <profile name="Annotation profile for servicio_estudiante" enabled="true">
+      <profile name="Annotation profile for servicio_reporte" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
+        </processorPath>
+        <module name="servicio_progreso" />
+        <module name="servicio_estudiante" />
+        <module name="servicio_reporte" />
+      </profile>
+      <profile name="Annotation profile for servicio_curso" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
         </processorPath>
-        <module name="servicio_estudiante" />
-        <module name="servicio_progreso" />
-        <module name="servicio_reporte" />
         <module name="servicio_curso" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="servicio_curso2" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="servicio_curso" options="-parameters" />
+      <module name="servicio_curso2" options="-parameters" />
       <module name="servicio_estudiante" options="-parameters" />
       <module name="servicio_progreso" options="-parameters" />
       <module name="servicio_reporte" options="-parameters" />
