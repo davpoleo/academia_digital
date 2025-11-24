@@ -1,0 +1,27 @@
+13:02:29.334 [main] INFO  a.s.ServicioEstudianteApplicationTests [] - Starting ServicioEstudianteApplicationTests using Java 17.0.0.1 with PID 14588 (started by David in C:\laragon\www\academia_digital\servicio_estudiante)
+13:02:29.351 [main] DEBUG a.s.ServicioEstudianteApplicationTests [] - Running with Spring Boot v3.5.8, Spring v6.2.14
+13:02:29.354 [main] INFO  a.s.ServicioEstudianteApplicationTests [] - The following 1 profile is active: "dev"
+13:02:31.119 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+13:02:31.254 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [] - Finished Spring Data repository scanning in 114 ms. Found 1 JPA repository interface.
+13:02:32.153 [main] INFO  o.h.jpa.internal.util.LogHelper [] - HHH000204: Processing PersistenceUnitInfo [name: default]
+13:02:32.273 [main] INFO  org.hibernate.Version [] - HHH000412: Hibernate ORM core version 6.6.36.Final
+13:02:32.341 [main] INFO  o.h.c.i.RegionFactoryInitiator [] - HHH000026: Second-level cache disabled
+13:02:33.009 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo [] - No LoadTimeWeaver setup: ignoring JPA class transformer
+13:02:33.081 [main] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Starting...
+13:02:33.610 [main] INFO  com.zaxxer.hikari.pool.HikariPool [] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27a6384b
+13:02:33.613 [main] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Start completed.
+13:02:33.782 [main] INFO  o.hibernate.orm.connections.pooling [] - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.30
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+13:02:35.217 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator [] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+13:02:35.300 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+13:02:36.326 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13:02:37.311 [main] INFO  a.s.ServicioEstudianteApplicationTests [] - Started ServicioEstudianteApplicationTests in 9.322 seconds (process running for 11.574)
+13:02:37.969 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Closing JPA EntityManagerFactory for persistence unit 'default'
+13:02:37.974 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown initiated...
+13:02:37.991 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown completed.

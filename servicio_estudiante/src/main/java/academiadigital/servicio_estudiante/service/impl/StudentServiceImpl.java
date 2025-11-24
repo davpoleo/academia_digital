@@ -32,6 +32,7 @@ public class StudentServiceImpl implements StudentService {
         log.info("Realizando busqueda de estudiante por id: {}", id);
         Student searchStudentbyId = studentRepository.findById(id)
                 .orElseThrow(()-> new StudentIdNotFoundException(id, ApiConstants.BUSINESS_ERR_ID_NOT_FOUND));
+        log.info("Estudiante con id: {} encontrado", id);
         return studentMapper.mapToStudentDto(searchStudentbyId);
     }
 
@@ -41,6 +42,7 @@ public class StudentServiceImpl implements StudentService {
         log.info("Realizando busqueda de estudiante por email: {}", email);
         Student searchStudentByEmail = studentRepository.findByEmail(email)
                 .orElseThrow(()-> new StudentEmailNotFoundException(email, ApiConstants.BUSINESS_ERR_EMAIL_NOT_FOUND));
+        log.info("Estudiante con email: {} encontrado", email);
         return studentMapper.mapToStudentDto(searchStudentByEmail);
     }
 
@@ -85,7 +87,7 @@ public class StudentServiceImpl implements StudentService {
          studentToUpdate.setLastName(request.lastName());
          studentToUpdate.setEmail(request.email());
          Student updatedStudent = studentRepository.save(studentToUpdate);
-         log.info("Estudiante con id: {} creado satisfactoriamente", id);
+         log.info("Estudiante con id: {} actualizado satisfactoriamente", id);
          return studentMapper.mapToStudentDto(updatedStudent);
     }
 
