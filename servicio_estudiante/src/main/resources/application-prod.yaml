@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/db_estudiantes_prod
+    username: admin-prod
+    password:
+
+  jpa:
+    hibernate:
+      ddl-auto: validate #Valor recomendado para la integridad, la apicacion solo se ejecuta sin intentar modificar la BBDD
+    show-sql: false #Valor recomendado para desactivar los Logs SQL

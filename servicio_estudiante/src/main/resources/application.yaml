@@ -1,3 +1,13 @@
+#ARCHIVO DE CONFIGURACION SERVCIO ESTUDIANTES
+server:
+  port: 8081
 spring:
-  application:
-    name: servicio_estudiante
+  profiles:
+    active: dev
+  jpa:
+    hibernate:
+      ddl-auto: update    #este campo de sebe cambiar a Validate para produccion
+    show-sql: true
+    spring:
+      application:
+        name: servicio-estudiante
