@@ -6,8 +6,8 @@ public class ApiConstants {
     //ERROR VALIDATION MESSAGES
     public static final String VALIDATE_ERR_GENERAL = "Error de Validacion";
     public static final String VALIDATE_ERR_BLANKS_MESSAGE = "El campo no puede estar vacio";
-    public static final String VALIDATE_ERR_EMAIL_MESSAGE = "Se debe ingresar un email valido";
     public static final String VALIDATE_ERR_UNEXPECTED = "Ocurrio un error inesperado";
+    public static final String VALIDATE_ERR_DATA_INTEGRITY = "No se puede eliminar el recurso, tiene datos asociados";
 
     //BUSINESS ERROR MESSAGE
     public static final String BUSINESS_ERR_ID_NOT_FOUND = "El ID no esta registrado en el sistema";
@@ -27,6 +27,12 @@ public class ApiConstants {
     public static final String CONTROLLER_MAP_GET_ALL = "/all";
     public static final String CONTROLLER_MAP_UPDATE = "/update/{id}";
     public static final String CONTROLLER_MAP_DELETE = "/delete/{id}";
+    public static final String CONTROLLER_MAP_ENROLLMENT = "/enrollment";
+
+    // RUTAS FEING CLIENT
+    public static final String FEING_V1_ESTUDIANTES_NAME = "servicio-estudiantes";
+    public static final String FEING_V1_ESTUDIANTES_URL = "http://localhost:8081";
+    public static final String FEING_V1_ESTUDIANTES_PATH = "/api/v1/estudiantes";
 
     //APP TRACEABILITY
     public static final String TRACE_ID_HEADER = "X-Trace-Id";

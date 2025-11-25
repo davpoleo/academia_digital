@@ -68,7 +68,7 @@ public class GlobalExeptionHandler {
         return new ResponseEntity<>(errorResponseDto, HttpStatus.NOT_FOUND);
     }
 
-    //Manejador de conflictos 409 (Duplicidad)
+    //Manejador de conflicto 409
     @ExceptionHandler(DuplicatedResourceException.class)
     public ResponseEntity<ErrorResponseDto> handlerDuplicatedResourceException(
             DuplicatedResourceException exception,

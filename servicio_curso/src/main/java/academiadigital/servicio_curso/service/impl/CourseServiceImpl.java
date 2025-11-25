@@ -8,6 +8,7 @@ import academiadigital.servicio_curso.exception.DuplicatedResourceException;
 import academiadigital.servicio_curso.mapper.CourseMapper;
 import academiadigital.servicio_curso.model.Course;
 import academiadigital.servicio_curso.repository.CourseRepository;
+import academiadigital.servicio_curso.repository.EnrollmentRepository;
 import academiadigital.servicio_curso.service.CourseService;
 import academiadigital.servicio_curso.util.ApiConstants;
 import lombok.RequiredArgsConstructor;
@@ -24,6 +25,7 @@ import java.util.stream.Collectors;
 public class CourseServiceImpl implements CourseService {
     private final CourseRepository courseRepository;
     private final CourseMapper courseMapper;
+    private final EnrollmentRepository enrollmentRepository;
 
     @Override
     @Transactional(readOnly = true)
@@ -91,6 +93,12 @@ public class CourseServiceImpl implements CourseService {
     @Override
     @Transactional
     public void deleteCourse(Long id) {
+        boolean existsEnrollmets = enrollmentRepository.existsByCourseId(id);
+        if (existsEnrollmets){
+            log.info("Error al eliminar el curso con Id: {} - tiene estudiantes inscritos", id);
+            throw new DuplicatedResourceException(ApiConstants.VALIDATE_ERR_DATA_INTEGRITY);
+        }
+
         log.info("Ejecutando la eliminacion del curso con id: {}", id);
         Course courseToDelete = courseRepository.findById(id)
                 .orElseThrow(()-> new CourseIdNotFoundException(ApiConstants.BUSINESS_ERR_ID_NOT_FOUND));
