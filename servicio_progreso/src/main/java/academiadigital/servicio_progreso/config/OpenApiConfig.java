@@ -1,4 +1,4 @@
-package academiadigital.servicio_curso.config;
+package academiadigital.servicio_progreso.config;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Contact;
@@ -12,9 +12,9 @@ public class OpenApiConfig {
     public OpenAPI customOpenApiConfig(){
         return new OpenAPI()
                 .info(new Info()
-                        .title("Api de Cursos e inscripciones")
+                        .title("Api de Progresso academico")
                         .version("1.0.0")
-                        .description("Microservicio para gestionar la creacion de cursos e inscripciones en el sistema")
+                        .description("Microservicio para gestionar la creacion de progreso de los estudiantes en los cursos")
                         .contact( new Contact()
                                 .name("David Poleo")
                                 .email("david@email.com")

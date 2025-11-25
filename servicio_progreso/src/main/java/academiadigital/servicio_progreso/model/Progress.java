@@ -25,12 +25,11 @@ public class Progress {
     private Long studentId;
     @NotNull(message = "El Id del estudiante no puede ser null")
     @Positive(message = "El ID del curso debe ser un número positivo")
-    private Long CourseId;
-    @NotNull(message = "El Id del estudiante no puede ser null")
+    private Long courseId;
+    @NotNull(message = "El Id del porcentaje e progreso no puede ser null")
     @Min(value = 0, message = "El porcentaje no puede ser menor a 0")
     @Max(value = 100, message = "El porcentaje no puede ser mayor a 100")
     private Integer progressPercentage;
     @NotNull(message = "La fecha de actualización es obligatoria")
     private LocalDateTime updateDate;
-
 }

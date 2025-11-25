@@ -28,13 +28,16 @@ public class ApiConstants {
     public static final String CONTROLLER_MAP_GET_ALL = "/all";
     public static final String CONTROLLER_MAP_UPDATE = "/update/{id}";
     public static final String CONTROLLER_MAP_DELETE = "/delete/{id}";
-    public static final String CONTROLLER_MAP_ENROLLMENT_DELETE = "/enrollment/{courseId}/students/{studentId}";
-    public static final String CONTROLLER_MAP_ENROLLMENT = "/enrollment";
+    public static final String CONTROLLER_MAP_ENROLLMENT_DELETE = "/progress/{courseId}/students/{studentId}";
+    public static final String CONTROLLER_MAP_ENROLLMENT = "/progress";
 
     // RUTAS FEING CLIENT
     public static final String FEING_V1_ESTUDIANTES_NAME = "servicio-estudiantes";
     public static final String FEING_V1_ESTUDIANTES_URL = "http://localhost:8081";
     public static final String FEING_V1_ESTUDIANTES_PATH = "/api/v1/students";
+    public static final String FEING_V1_COURSES_NAME = "servicio-cursos";
+    public static final String FEING_V1_COURSES_URL = "http://localhost:8082";
+    public static final String FEING_V1_COURSES_PATH = "/api/v1/courses";
 
     //APP TRACEABILITY
     public static final String TRACE_ID_HEADER = "X-Trace-Id";

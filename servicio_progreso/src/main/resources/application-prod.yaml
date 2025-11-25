@@ -3,4 +3,4 @@ spring:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/db_progreso_prod
     username: admin-prod
-    password:
+    password: asd123asd

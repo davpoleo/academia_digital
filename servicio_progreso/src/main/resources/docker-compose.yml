@@ -14,7 +14,7 @@ services:
       MYSQL_ROOT_PASSWORD: asd123asd
       # Nombre de la base de datos que se creará automáticamente al iniciar
       # Esto debe coincidir con el nombre en tu URL de Spring Boot
-      MYSQL_DATABASE: db_cursos_dev
+      MYSQL_DATABASE: db_progreso_dev
     # Montar un volumen para la persistencia de datos (opcional, pero recomendado)
     # Esto asegura que los datos no se pierdan al detener/reiniciar el contenedor
     volumes:
