@@ -8,19 +8,21 @@ import academiadigital.servicio_curso.exception.CourseIdNotFoundException;
 import academiadigital.servicio_curso.exception.ResourceNotFoundException;
 import academiadigital.servicio_curso.mapper.EnrollmentMapper;
 import academiadigital.servicio_curso.model.Enrollment;
+import academiadigital.servicio_curso.repository.CourseRepository;
 import academiadigital.servicio_curso.repository.EnrollmentRepository;
 import academiadigital.servicio_curso.service.CourseService;
 import academiadigital.servicio_curso.service.EnrollmentService;
 import academiadigital.servicio_curso.util.ApiConstants;
 import feign.FeignException;
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 @Slf4j
@@ -34,6 +36,8 @@ public class EnrollmentServiceImpl implements EnrollmentService {
     private final EnrollmentMapper enrollmentMapper;
     @Autowired
     private final CourseService courseService;
+    @Autowired
+    private final CourseRepository courseRepository;
 
     @Override
     public EnrollmentResponseDto makeEnrollment(EnrollmentRequestDto requestDto) {
@@ -60,6 +64,18 @@ public class EnrollmentServiceImpl implements EnrollmentService {
         }catch(FeignException.NotFound error){
             throw new ResourceNotFoundException(ApiConstants.BUSINESS_ERR_ID_NOT_FOUND);
         }
+    }
+
+    public List<Long> getStudentsByCourse(Long courseId){
+        //Se verifica si el curso existe
+        if(!courseRepository.existsById(courseId)){
+            throw new ResourceNotFoundException(ApiConstants.BUSINESS_ERR_ID_NOT_FOUND);
+        }
+        List<Enrollment> enrollmentList = enrollmentRepository.findByCourseId(courseId);
+        //Uso de Streams para mapear la lista de objetos Inscripcion a una Lista de Long (Solos los Ids)
+        return enrollmentList.stream()
+                .map(Enrollment::getStudentId)
+                .collect(Collectors.toList());
     }
 
     @Override

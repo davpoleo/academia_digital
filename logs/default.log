@@ -1250,3 +1250,64 @@ academiadigital.servicio_estudiante.controller.StudentController#getAllStudents(
 14:37:44.555 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Closing JPA EntityManagerFactory for persistence unit 'default'
 14:37:44.599 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown initiated...
 14:37:44.633 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown completed.
+23:06:18.220 [restartedMain] INFO  a.s.ServicioEstudianteApplication [] - Starting ServicioEstudianteApplication using Java 17.0.0.1 with PID 20056 (C:\laragon\www\academia_digital\servicio_estudiante\target\classes started by David in C:\laragon\www\academia_digital)
+23:06:18.260 [restartedMain] DEBUG a.s.ServicioEstudianteApplication [] - Running with Spring Boot v3.5.8, Spring v6.2.14
+23:06:18.262 [restartedMain] INFO  a.s.ServicioEstudianteApplication [] - The following 1 profile is active: "dev"
+23:06:18.418 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+23:06:18.419 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+23:06:21.162 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+23:06:21.399 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [] - Finished Spring Data repository scanning in 199 ms. Found 1 JPA repository interface.
+23:06:23.452 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer [] - Tomcat initialized with port 8081 (http)
+23:06:23.496 [restartedMain] INFO  o.a.catalina.core.StandardService [] - Starting service [Tomcat]
+23:06:23.497 [restartedMain] INFO  o.a.catalina.core.StandardEngine [] - Starting Servlet engine: [Apache Tomcat/10.1.49]
+23:06:23.690 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [] - Initializing Spring embedded WebApplicationContext
+23:06:23.692 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [] - Root WebApplicationContext: initialization completed in 5269 ms
+23:06:23.851 [restartedMain] DEBUG a.s.config.LogginFilter [] - Filter 'logginFilter' configured for use
+23:06:24.263 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper [] - HHH000204: Processing PersistenceUnitInfo [name: default]
+23:06:24.425 [restartedMain] INFO  org.hibernate.Version [] - HHH000412: Hibernate ORM core version 6.6.36.Final
+23:06:24.560 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator [] - HHH000026: Second-level cache disabled
+23:06:25.305 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo [] - No LoadTimeWeaver setup: ignoring JPA class transformer
+23:06:25.389 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Starting...
+23:06:26.096 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool [] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@32540985
+23:06:26.101 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Start completed.
+23:06:26.313 [restartedMain] INFO  o.hibernate.orm.connections.pooling [] - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.30
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+23:06:28.328 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator [] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+23:06:28.457 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+23:06:29.760 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+23:06:31.225 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer [] - LiveReload server is running on port 35729
+23:06:31.343 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer [] - Tomcat started on port 8081 (http) with context path '/'
+23:06:31.372 [restartedMain] INFO  a.s.ServicioEstudianteApplication [] - Started ServicioEstudianteApplication in 15.758 seconds (process running for 17.272)
+23:07:43.300 [http-nio-8081-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:07:43.301 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet [] - Initializing Servlet 'dispatcherServlet'
+23:07:43.305 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet [] - Completed initialization in 2 ms
+23:07:44.840 [http-nio-8081-exec-3] INFO  o.s.api.AbstractOpenApiResource [8e5f1e0b-3897-4cd4-9a43-9197ba248897] - Init duration for springdoc-openapi is: 1076 ms
+23:07:53.707 [http-nio-8081-exec-4] INFO  a.s.service.impl.StudentServiceImpl [71e317ea-935c-42a7-8582-9fec0c885b88] - Realizando busqueda de estudiante por id: 2
+23:07:53.903 [http-nio-8081-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [71e317ea-935c-42a7-8582-9fec0c885b88] - Resolved [academiadigital.servicio_estudiante.exception.StudentIdNotFoundException: El ID no esta registrado en el sistema]
+23:07:58.901 [http-nio-8081-exec-5] INFO  a.s.service.impl.StudentServiceImpl [156ea3e4-62e1-48c8-b62b-66a418009950] - Realizando busqueda de estudiante por id: 1
+23:07:58.918 [http-nio-8081-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [156ea3e4-62e1-48c8-b62b-66a418009950] - Resolved [academiadigital.servicio_estudiante.exception.StudentIdNotFoundException: El ID no esta registrado en el sistema]
+23:08:03.671 [http-nio-8081-exec-6] INFO  a.s.service.impl.StudentServiceImpl [44c7daed-461e-4961-9635-4786e2d8f49a] - Realizando busqueda de estudiante por id: 3
+23:08:03.686 [http-nio-8081-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [44c7daed-461e-4961-9635-4786e2d8f49a] - Resolved [academiadigital.servicio_estudiante.exception.StudentIdNotFoundException: El ID no esta registrado en el sistema]
+23:08:10.597 [http-nio-8081-exec-7] INFO  a.s.service.impl.StudentServiceImpl [a111d39e-31e7-45a3-af22-3cea4b73d321] - Realizando busqueda de todos los estudiantes registrados
+23:08:20.999 [http-nio-8081-exec-8] INFO  a.s.service.impl.StudentServiceImpl [f99af569-4c03-43f4-8299-cd0fdadc4b8c] - Iniciando la creacion del estudiante con email: email@example.com
+23:08:21.160 [http-nio-8081-exec-8] INFO  a.s.service.impl.StudentServiceImpl [f99af569-4c03-43f4-8299-cd0fdadc4b8c] - Estudiante con email: email@example.com creado satisfactoriamente
+23:28:11.798 [http-nio-8081-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [f6db1f9b-6ea9-4162-b045-e66d513dfc7e] - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/v1/estudiantes/5.]
+23:28:41.797 [http-nio-8081-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [b7b96db7-3284-4126-92a7-0df0dd76a859] - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/v1/estudiantes/3.]
+23:29:11.119 [http-nio-8081-exec-7] INFO  a.s.service.impl.StudentServiceImpl [3eead0f2-3ea6-4cfd-b51a-53291e54ab3a] - Realizando busqueda de todos los estudiantes registrados
+23:29:23.720 [http-nio-8081-exec-1] INFO  a.s.service.impl.StudentServiceImpl [a3f87458-462f-4bb6-b93d-5c720c89efe6] - Realizando busqueda de todos los estudiantes registrados
+23:29:34.425 [http-nio-8081-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [11ea3c4f-a394-4b0d-9437-1d1a90629207] - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/v1/estudiantes/3.]
+23:30:55.109 [http-nio-8081-exec-6] INFO  a.s.service.impl.StudentServiceImpl [c4b403ff-09a9-404d-a603-9c30b15cf221] - Realizando busqueda de estudiante por id: 1
+23:30:55.124 [http-nio-8081-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [c4b403ff-09a9-404d-a603-9c30b15cf221] - Resolved [academiadigital.servicio_estudiante.exception.StudentIdNotFoundException: El ID no esta registrado en el sistema]
+23:31:30.010 [http-nio-8081-exec-7] INFO  a.s.service.impl.StudentServiceImpl [e39baca2-0e6e-4d4f-99e1-7a0afba89bc6] - Realizando busqueda de estudiante por id: 3
+23:31:30.018 [http-nio-8081-exec-7] INFO  a.s.service.impl.StudentServiceImpl [e39baca2-0e6e-4d4f-99e1-7a0afba89bc6] - Estudiante con id: 3 encontrado
+23:33:49.364 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown [] - Commencing graceful shutdown. Waiting for active requests to complete
+23:33:49.542 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown [] - Graceful shutdown complete
+23:33:49.554 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Closing JPA EntityManagerFactory for persistence unit 'default'
+23:33:49.580 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown initiated...
+23:33:49.625 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown completed.

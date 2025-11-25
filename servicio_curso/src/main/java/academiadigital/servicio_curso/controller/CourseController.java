@@ -1,10 +1,12 @@
 package academiadigital.servicio_curso.controller;
 
-import academiadigital.servicio_curso.dto.CourseRequestDto;
-import academiadigital.servicio_curso.dto.CourseResponseDto;
+import academiadigital.servicio_curso.dto.*;
 import academiadigital.servicio_curso.service.CourseService;
+import academiadigital.servicio_curso.service.EnrollmentService;
 import academiadigital.servicio_curso.util.ApiConstants;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
@@ -21,6 +23,7 @@ import java.util.List;
 @Tag(name = "Cursos", description = "Operaciones CRUD para la gestion de cursos")
 public class CourseController {
     private final CourseService courseService;
+    private final EnrollmentService enrollmentService;
 
     @Operation(summary = "Obtiene informacion de un curso por su ID")
     @ApiResponse(responseCode = "200", description = "Curso encontrado por id")
@@ -75,6 +78,27 @@ public class CourseController {
     @DeleteMapping(ApiConstants.CONTROLLER_MAP_DELETE)
     public ResponseEntity<Void> deleteStudent(@PathVariable Long id){
         courseService.deleteCourse(id);
+        return ResponseEntity.noContent().build();
+    }
+
+    //ENROLLMENT ENDPOINTS
+    @Operation(summary = "Inscribir un Estudiante a un curso")
+    @ApiResponse(responseCode = "201", description = "Inscripcion exitosa")
+    @ApiResponse(responseCode = "409", description = "Error en las inscripcion")
+    @PostMapping(ApiConstants.CONTROLLER_MAP_ENROLLMENT)
+    @ResponseStatus(HttpStatus.CREATED)
+    public ResponseEntity<EnrollmentResponseDto> makeEnrollment(@Valid @RequestBody EnrollmentRequestDto request
+    ){
+        EnrollmentResponseDto enrollment = enrollmentService.makeEnrollment(request);
+        return new ResponseEntity<>(enrollment, HttpStatus.CREATED);
+    }
+
+    @Operation(summary = "Elimina un estudiante por Id")
+    @ApiResponse(responseCode = "204", description = "Estudiante eliminado exitosamente")
+    @ApiResponse(responseCode = "404", description = "Id para eliminacion no encontrado")
+    @DeleteMapping(ApiConstants.CONTROLLER_MAP_ENROLLMENT_DELETE)
+    public ResponseEntity<Void> deleteEnrollment(@PathVariable Long courseId, @PathVariable Long studentId){
+        enrollmentService.deleteEnrollment(studentId, courseId);
         return ResponseEntity.noContent().build();
     }
 }
