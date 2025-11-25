@@ -1311,3 +1311,47 @@ academiadigital.servicio_estudiante.controller.StudentController#getAllStudents(
 23:33:49.554 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Closing JPA EntityManagerFactory for persistence unit 'default'
 23:33:49.580 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown initiated...
 23:33:49.625 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown completed.
+23:52:21.416 [restartedMain] INFO  a.s.ServicioCursoApplication [] - Starting ServicioCursoApplication using Java 17.0.0.1 with PID 15580 (C:\laragon\www\academia_digital\servicio_curso\target\classes started by David in C:\laragon\www\academia_digital)
+23:52:21.446 [restartedMain] DEBUG a.s.ServicioCursoApplication [] - Running with Spring Boot v3.5.8, Spring v6.2.14
+23:52:21.452 [restartedMain] INFO  a.s.ServicioCursoApplication [] - The following 1 profile is active: "dev"
+23:52:21.628 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+23:52:21.630 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+23:52:24.506 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+23:52:24.722 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [] - Finished Spring Data repository scanning in 186 ms. Found 2 JPA repository interfaces.
+23:52:25.276 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope [] - BeanFactory id=9e154d0f-8a47-3e3c-b7cc-aa8eddf64706
+23:52:27.140 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer [] - Tomcat initialized with port 8082 (http)
+23:52:27.183 [restartedMain] INFO  o.a.catalina.core.StandardService [] - Starting service [Tomcat]
+23:52:27.185 [restartedMain] INFO  o.a.catalina.core.StandardEngine [] - Starting Servlet engine: [Apache Tomcat/10.1.49]
+23:52:27.443 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [] - Initializing Spring embedded WebApplicationContext
+23:52:27.445 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [] - Root WebApplicationContext: initialization completed in 5814 ms
+23:52:27.614 [restartedMain] DEBUG a.servicio_curso.config.LogginFilter [] - Filter 'logginFilter' configured for use
+23:52:28.599 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper [] - HHH000204: Processing PersistenceUnitInfo [name: default]
+23:52:28.963 [restartedMain] INFO  org.hibernate.Version [] - HHH000412: Hibernate ORM core version 6.6.36.Final
+23:52:29.134 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator [] - HHH000026: Second-level cache disabled
+23:52:30.265 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo [] - No LoadTimeWeaver setup: ignoring JPA class transformer
+23:52:30.374 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Starting...
+23:52:31.327 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool [] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1989fff0
+23:52:31.335 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Start completed.
+23:52:31.628 [restartedMain] INFO  o.hibernate.orm.connections.pooling [] - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.30
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+23:52:35.454 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator [] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+23:52:35.612 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+23:52:37.553 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+23:52:37.676 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer [] - LiveReload server is running on port 35729
+23:52:40.190 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer [] - Tomcat started on port 8082 (http) with context path '/'
+23:52:40.509 [restartedMain] INFO  a.s.ServicioCursoApplication [] - Started ServicioCursoApplication in 21.81 seconds (process running for 23.749)
+23:52:46.887 [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:52:46.888 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet [] - Initializing Servlet 'dispatcherServlet'
+23:52:46.892 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet [] - Completed initialization in 2 ms
+23:52:48.319 [http-nio-8082-exec-4] INFO  o.s.api.AbstractOpenApiResource [19e9ef28-f2b0-425f-b8fe-d30359e4c4ec] - Init duration for springdoc-openapi is: 898 ms
+23:53:57.298 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown [] - Commencing graceful shutdown. Waiting for active requests to complete
+23:53:57.462 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown [] - Graceful shutdown complete
+23:53:57.475 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Closing JPA EntityManagerFactory for persistence unit 'default'
+23:53:57.486 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown initiated...
+23:53:57.515 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown completed.
