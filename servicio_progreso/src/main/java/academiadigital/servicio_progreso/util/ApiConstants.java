@@ -23,13 +23,7 @@ public class ApiConstants {
     //CONTROLLER PATH
     public static final String CONTROLLER_MAP_BASE = "/api/v1/progress";
     public static final String CONTROLLER_MAP_CREATE = "/create";
-    public static final String CONTROLLER_MAP_GET_BY_ID = "/{id}";
-    public static final String CONTROLLER_MAP_GET_BY_TITLE = "title/{title}";
-    public static final String CONTROLLER_MAP_GET_ALL = "/all";
-    public static final String CONTROLLER_MAP_UPDATE = "/update/{id}";
-    public static final String CONTROLLER_MAP_DELETE = "/delete/{id}";
-    public static final String CONTROLLER_MAP_ENROLLMENT_DELETE = "/progress/{courseId}/students/{studentId}";
-    public static final String CONTROLLER_MAP_ENROLLMENT = "/progress";
+    public static final String CONTROLLER_MAP_GET_BY_ID = "/course/{courseId}/events";
 
     // RUTAS FEING CLIENT
     public static final String FEING_V1_ESTUDIANTES_NAME = "servicio-estudiantes";

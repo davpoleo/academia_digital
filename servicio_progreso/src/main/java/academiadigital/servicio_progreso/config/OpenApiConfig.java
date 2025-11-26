@@ -6,15 +6,17 @@ import io.swagger.v3.oas.models.info.Info;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+
 @Configuration
 public class OpenApiConfig {
+
     @Bean
     public OpenAPI customOpenApiConfig(){
         return new OpenAPI()
                 .info(new Info()
-                        .title("Api de Progresso academico")
+                        .title("Api de Progreso")
                         .version("1.0.0")
-                        .description("Microservicio para gestionar la creacion de progreso de los estudiantes en los cursos")
+                        .description("Microservicio para capturar todos los eventos realizados")
                         .contact( new Contact()
                                 .name("David Poleo")
                                 .email("david@email.com")

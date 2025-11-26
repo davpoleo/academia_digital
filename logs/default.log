@@ -199,3 +199,377 @@
 21:18:25.429 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown initiated...
 21:18:25.434 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown completed.
 21:18:25.489 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown completed.
+23:23:15.974 [restartedMain] INFO  a.s.ServicioProgresoApplication [] - Starting ServicioProgresoApplication using Java 17.0.0.1 with PID 18804 (C:\laragon\www\academia_digital\servicio_progreso\target\classes started by David in C:\laragon\www\academia_digital)
+23:23:16.020 [restartedMain] DEBUG a.s.ServicioProgresoApplication [] - Running with Spring Boot v3.5.8, Spring v6.2.14
+23:23:16.024 [restartedMain] INFO  a.s.ServicioProgresoApplication [] - The following 1 profile is active: "dev"
+23:23:16.202 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+23:23:16.203 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+23:23:19.372 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+23:23:19.554 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [] - Finished Spring Data repository scanning in 142 ms. Found 1 JPA repository interface.
+23:23:20.259 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope [] - BeanFactory id=f886516f-d251-3c05-a8a8-a6c02a812722
+23:23:22.040 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer [] - Tomcat initialized with port 8083 (http)
+23:23:22.091 [restartedMain] INFO  o.a.catalina.core.StandardService [] - Starting service [Tomcat]
+23:23:22.092 [restartedMain] INFO  o.a.catalina.core.StandardEngine [] - Starting Servlet engine: [Apache Tomcat/10.1.49]
+23:23:22.334 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [] - Initializing Spring embedded WebApplicationContext
+23:23:22.335 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [] - Root WebApplicationContext: initialization completed in 6129 ms
+23:23:22.483 [restartedMain] DEBUG a.s.config.LogginFilter [] - Filter 'logginFilter' configured for use
+23:23:22.932 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper [] - HHH000204: Processing PersistenceUnitInfo [name: default]
+23:23:23.187 [restartedMain] INFO  org.hibernate.Version [] - HHH000412: Hibernate ORM core version 6.6.36.Final
+23:23:23.388 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator [] - HHH000026: Second-level cache disabled
+23:23:24.396 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo [] - No LoadTimeWeaver setup: ignoring JPA class transformer
+23:23:24.510 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Starting...
+23:23:25.448 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool [] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3359a767
+23:23:25.455 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Start completed.
+23:23:25.779 [restartedMain] INFO  o.hibernate.orm.connections.pooling [] - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.30
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+23:23:28.220 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator [] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+23:23:28.449 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+23:23:29.407 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'progressController' defined in file [C:\laragon\www\academia_digital\servicio_progreso\target\classes\academiadigital\servicio_progreso\controller\ProgressController.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'academiadigital.servicio_progreso.dto.ProgressEventDto' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+23:23:29.408 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Closing JPA EntityManagerFactory for persistence unit 'default'
+23:23:29.421 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown initiated...
+23:23:29.446 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown completed.
+23:23:29.454 [restartedMain] INFO  o.a.catalina.core.StandardService [] - Stopping service [Tomcat]
+23:23:29.490 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger [] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+23:23:29.557 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter [] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of constructor in academiadigital.servicio_progreso.controller.ProgressController required a bean of type 'academiadigital.servicio_progreso.dto.ProgressEventDto' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'academiadigital.servicio_progreso.dto.ProgressEventDto' in your configuration.
+
+23:27:58.480 [restartedMain] INFO  a.s.ServicioProgresoApplication [] - Starting ServicioProgresoApplication using Java 17.0.0.1 with PID 19364 (C:\laragon\www\academia_digital\servicio_progreso\target\classes started by David in C:\laragon\www\academia_digital)
+23:27:58.526 [restartedMain] DEBUG a.s.ServicioProgresoApplication [] - Running with Spring Boot v3.5.8, Spring v6.2.14
+23:27:58.530 [restartedMain] INFO  a.s.ServicioProgresoApplication [] - The following 1 profile is active: "dev"
+23:27:58.718 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+23:27:58.720 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+23:28:01.682 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+23:28:01.866 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [] - Finished Spring Data repository scanning in 152 ms. Found 1 JPA repository interface.
+23:28:02.541 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope [] - BeanFactory id=f886516f-d251-3c05-a8a8-a6c02a812722
+23:28:04.223 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer [] - Tomcat initialized with port 8083 (http)
+23:28:04.261 [restartedMain] INFO  o.a.catalina.core.StandardService [] - Starting service [Tomcat]
+23:28:04.262 [restartedMain] INFO  o.a.catalina.core.StandardEngine [] - Starting Servlet engine: [Apache Tomcat/10.1.49]
+23:28:04.474 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [] - Initializing Spring embedded WebApplicationContext
+23:28:04.476 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [] - Root WebApplicationContext: initialization completed in 5755 ms
+23:28:04.622 [restartedMain] DEBUG a.s.config.LogginFilter [] - Filter 'logginFilter' configured for use
+23:28:05.012 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper [] - HHH000204: Processing PersistenceUnitInfo [name: default]
+23:28:05.175 [restartedMain] INFO  org.hibernate.Version [] - HHH000412: Hibernate ORM core version 6.6.36.Final
+23:28:05.312 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator [] - HHH000026: Second-level cache disabled
+23:28:06.132 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo [] - No LoadTimeWeaver setup: ignoring JPA class transformer
+23:28:06.231 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Starting...
+23:28:06.969 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool [] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e962b48
+23:28:06.973 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Start completed.
+23:28:07.209 [restartedMain] INFO  o.hibernate.orm.connections.pooling [] - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.30
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+23:28:09.382 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator [] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+23:28:09.521 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+23:28:10.385 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'progressController' defined in file [C:\laragon\www\academia_digital\servicio_progreso\target\classes\academiadigital\servicio_progreso\controller\ProgressController.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'academiadigital.servicio_progreso.dto.ProgressEventDto' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+23:28:10.386 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Closing JPA EntityManagerFactory for persistence unit 'default'
+23:28:10.401 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown initiated...
+23:28:10.429 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown completed.
+23:28:10.438 [restartedMain] INFO  o.a.catalina.core.StandardService [] - Stopping service [Tomcat]
+23:28:10.473 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger [] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+23:28:10.552 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter [] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of constructor in academiadigital.servicio_progreso.controller.ProgressController required a bean of type 'academiadigital.servicio_progreso.dto.ProgressEventDto' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'academiadigital.servicio_progreso.dto.ProgressEventDto' in your configuration.
+
+23:33:40.961 [restartedMain] INFO  a.s.ServicioProgresoApplication [] - Starting ServicioProgresoApplication using Java 17.0.0.1 with PID 6844 (C:\laragon\www\academia_digital\servicio_progreso\target\classes started by David in C:\laragon\www\academia_digital)
+23:33:40.999 [restartedMain] DEBUG a.s.ServicioProgresoApplication [] - Running with Spring Boot v3.5.8, Spring v6.2.14
+23:33:41.004 [restartedMain] INFO  a.s.ServicioProgresoApplication [] - The following 1 profile is active: "dev"
+23:33:41.213 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+23:33:41.215 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+23:33:44.335 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+23:33:44.571 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [] - Finished Spring Data repository scanning in 199 ms. Found 1 JPA repository interface.
+23:33:45.288 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope [] - BeanFactory id=f886516f-d251-3c05-a8a8-a6c02a812722
+23:33:46.894 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer [] - Tomcat initialized with port 8083 (http)
+23:33:46.938 [restartedMain] INFO  o.a.catalina.core.StandardService [] - Starting service [Tomcat]
+23:33:46.940 [restartedMain] INFO  o.a.catalina.core.StandardEngine [] - Starting Servlet engine: [Apache Tomcat/10.1.49]
+23:33:47.180 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [] - Initializing Spring embedded WebApplicationContext
+23:33:47.183 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [] - Root WebApplicationContext: initialization completed in 5965 ms
+23:33:47.373 [restartedMain] DEBUG a.s.config.LogginFilter [] - Filter 'logginFilter' configured for use
+23:33:47.838 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper [] - HHH000204: Processing PersistenceUnitInfo [name: default]
+23:33:48.036 [restartedMain] INFO  org.hibernate.Version [] - HHH000412: Hibernate ORM core version 6.6.36.Final
+23:33:48.168 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator [] - HHH000026: Second-level cache disabled
+23:33:49.085 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo [] - No LoadTimeWeaver setup: ignoring JPA class transformer
+23:33:49.153 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Starting...
+23:33:49.835 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool [] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@44c61c2a
+23:33:49.841 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Start completed.
+23:33:50.104 [restartedMain] INFO  o.hibernate.orm.connections.pooling [] - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.30
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+23:33:52.305 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator [] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+23:33:52.424 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+23:33:53.284 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'progressController' defined in file [C:\laragon\www\academia_digital\servicio_progreso\target\classes\academiadigital\servicio_progreso\controller\ProgressController.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'academiadigital.servicio_progreso.dto.ProgressEventDto' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+23:33:53.285 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Closing JPA EntityManagerFactory for persistence unit 'default'
+23:33:53.301 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown initiated...
+23:33:53.331 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown completed.
+23:33:53.340 [restartedMain] INFO  o.a.catalina.core.StandardService [] - Stopping service [Tomcat]
+23:33:53.382 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger [] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+23:33:53.467 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter [] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of constructor in academiadigital.servicio_progreso.controller.ProgressController required a bean of type 'academiadigital.servicio_progreso.dto.ProgressEventDto' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'academiadigital.servicio_progreso.dto.ProgressEventDto' in your configuration.
+
+23:35:29.884 [restartedMain] INFO  a.s.ServicioProgresoApplication [] - Starting ServicioProgresoApplication using Java 17.0.0.1 with PID 20700 (C:\laragon\www\academia_digital\servicio_progreso\target\classes started by David in C:\laragon\www\academia_digital)
+23:35:29.921 [restartedMain] DEBUG a.s.ServicioProgresoApplication [] - Running with Spring Boot v3.5.8, Spring v6.2.14
+23:35:29.925 [restartedMain] INFO  a.s.ServicioProgresoApplication [] - The following 1 profile is active: "dev"
+23:35:30.144 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+23:35:30.145 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+23:35:33.262 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+23:35:33.480 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [] - Finished Spring Data repository scanning in 180 ms. Found 1 JPA repository interface.
+23:35:34.123 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope [] - BeanFactory id=f886516f-d251-3c05-a8a8-a6c02a812722
+23:35:35.978 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer [] - Tomcat initialized with port 8083 (http)
+23:35:36.025 [restartedMain] INFO  o.a.catalina.core.StandardService [] - Starting service [Tomcat]
+23:35:36.026 [restartedMain] INFO  o.a.catalina.core.StandardEngine [] - Starting Servlet engine: [Apache Tomcat/10.1.49]
+23:35:36.266 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [] - Initializing Spring embedded WebApplicationContext
+23:35:36.267 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [] - Root WebApplicationContext: initialization completed in 6120 ms
+23:35:36.396 [restartedMain] DEBUG a.s.config.LogginFilter [] - Filter 'logginFilter' configured for use
+23:35:36.803 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper [] - HHH000204: Processing PersistenceUnitInfo [name: default]
+23:35:36.957 [restartedMain] INFO  org.hibernate.Version [] - HHH000412: Hibernate ORM core version 6.6.36.Final
+23:35:37.084 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator [] - HHH000026: Second-level cache disabled
+23:35:37.964 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo [] - No LoadTimeWeaver setup: ignoring JPA class transformer
+23:35:38.065 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Starting...
+23:35:38.823 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool [] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ba113d0
+23:35:38.827 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Start completed.
+23:35:39.108 [restartedMain] INFO  o.hibernate.orm.connections.pooling [] - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.30
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+23:35:41.623 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator [] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+23:35:41.743 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+23:35:43.298 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+23:35:45.410 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer [] - LiveReload server is running on port 35729
+23:35:45.976 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer [] - Tomcat started on port 8083 (http) with context path '/'
+23:35:46.279 [restartedMain] INFO  a.s.ServicioProgresoApplication [] - Started ServicioProgresoApplication in 19.434 seconds (process running for 21.892)
+23:35:55.825 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown [] - Commencing graceful shutdown. Waiting for active requests to complete
+23:35:55.986 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown [] - Graceful shutdown complete
+23:35:55.995 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Closing JPA EntityManagerFactory for persistence unit 'default'
+23:35:56.005 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown initiated...
+23:35:56.037 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown completed.
+23:36:07.889 [restartedMain] INFO  a.s.ServicioProgresoApplication [] - Starting ServicioProgresoApplication using Java 17.0.0.1 with PID 6456 (C:\laragon\www\academia_digital\servicio_progreso\target\classes started by David in C:\laragon\www\academia_digital)
+23:36:07.925 [restartedMain] DEBUG a.s.ServicioProgresoApplication [] - Running with Spring Boot v3.5.8, Spring v6.2.14
+23:36:07.932 [restartedMain] INFO  a.s.ServicioProgresoApplication [] - The following 1 profile is active: "dev"
+23:36:08.113 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+23:36:08.114 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+23:36:11.072 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+23:36:11.261 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [] - Finished Spring Data repository scanning in 158 ms. Found 1 JPA repository interface.
+23:36:11.938 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope [] - BeanFactory id=f886516f-d251-3c05-a8a8-a6c02a812722
+23:36:13.424 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer [] - Tomcat initialized with port 8083 (http)
+23:36:13.466 [restartedMain] INFO  o.a.catalina.core.StandardService [] - Starting service [Tomcat]
+23:36:13.467 [restartedMain] INFO  o.a.catalina.core.StandardEngine [] - Starting Servlet engine: [Apache Tomcat/10.1.49]
+23:36:13.687 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [] - Initializing Spring embedded WebApplicationContext
+23:36:13.689 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [] - Root WebApplicationContext: initialization completed in 5573 ms
+23:36:13.839 [restartedMain] DEBUG a.s.config.LogginFilter [] - Filter 'logginFilter' configured for use
+23:36:14.207 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper [] - HHH000204: Processing PersistenceUnitInfo [name: default]
+23:36:14.366 [restartedMain] INFO  org.hibernate.Version [] - HHH000412: Hibernate ORM core version 6.6.36.Final
+23:36:14.495 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator [] - HHH000026: Second-level cache disabled
+23:36:15.275 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo [] - No LoadTimeWeaver setup: ignoring JPA class transformer
+23:36:15.360 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Starting...
+23:36:16.035 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool [] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@718390da
+23:36:16.041 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Start completed.
+23:36:16.296 [restartedMain] INFO  o.hibernate.orm.connections.pooling [] - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.30
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+23:36:18.927 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator [] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+23:36:19.053 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+23:36:20.360 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+23:36:21.722 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer [] - LiveReload server is running on port 35729
+23:36:22.181 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer [] - Tomcat started on port 8083 (http) with context path '/'
+23:36:22.452 [restartedMain] INFO  a.s.ServicioProgresoApplication [] - Started ServicioProgresoApplication in 17.338 seconds (process running for 19.432)
+23:36:30.381 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown [] - Commencing graceful shutdown. Waiting for active requests to complete
+23:36:30.555 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown [] - Graceful shutdown complete
+23:36:30.566 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Closing JPA EntityManagerFactory for persistence unit 'default'
+23:36:30.575 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown initiated...
+23:36:30.605 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown completed.
+23:40:06.574 [restartedMain] INFO  a.s.ServicioProgresoApplication [] - Starting ServicioProgresoApplication using Java 17.0.0.1 with PID 2084 (C:\laragon\www\academia_digital\servicio_progreso\target\classes started by David in C:\laragon\www\academia_digital)
+23:40:06.612 [restartedMain] DEBUG a.s.ServicioProgresoApplication [] - Running with Spring Boot v3.5.8, Spring v6.2.14
+23:40:06.616 [restartedMain] INFO  a.s.ServicioProgresoApplication [] - The following 1 profile is active: "dev"
+23:40:06.812 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+23:40:06.814 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+23:40:09.781 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+23:40:10.034 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [] - Finished Spring Data repository scanning in 222 ms. Found 1 JPA repository interface.
+23:40:11.329 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope [] - BeanFactory id=f886516f-d251-3c05-a8a8-a6c02a812722
+23:40:13.101 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer [] - Tomcat initialized with port 8083 (http)
+23:40:13.149 [restartedMain] INFO  o.a.catalina.core.StandardService [] - Starting service [Tomcat]
+23:40:13.149 [restartedMain] INFO  o.a.catalina.core.StandardEngine [] - Starting Servlet engine: [Apache Tomcat/10.1.49]
+23:40:13.375 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [] - Initializing Spring embedded WebApplicationContext
+23:40:13.377 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [] - Root WebApplicationContext: initialization completed in 6562 ms
+23:40:13.530 [restartedMain] DEBUG a.s.config.LogginFilter [] - Filter 'logginFilter' configured for use
+23:40:13.948 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper [] - HHH000204: Processing PersistenceUnitInfo [name: default]
+23:40:14.147 [restartedMain] INFO  org.hibernate.Version [] - HHH000412: Hibernate ORM core version 6.6.36.Final
+23:40:14.277 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator [] - HHH000026: Second-level cache disabled
+23:40:15.992 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo [] - No LoadTimeWeaver setup: ignoring JPA class transformer
+23:40:16.154 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Starting...
+23:40:16.934 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool [] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@15c1acb
+23:40:16.942 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Start completed.
+23:40:17.255 [restartedMain] INFO  o.hibernate.orm.connections.pooling [] - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.30
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+23:40:19.559 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator [] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+23:40:19.704 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+23:40:21.191 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+23:40:22.658 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer [] - LiveReload server is running on port 35729
+23:40:23.149 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer [] - Tomcat started on port 8083 (http) with context path '/'
+23:40:23.461 [restartedMain] INFO  a.s.ServicioProgresoApplication [] - Started ServicioProgresoApplication in 20.008 seconds (process running for 22.202)
+23:40:28.322 [http-nio-8083-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:40:28.324 [http-nio-8083-exec-2] INFO  o.s.web.servlet.DispatcherServlet [] - Initializing Servlet 'dispatcherServlet'
+23:40:28.331 [http-nio-8083-exec-2] INFO  o.s.web.servlet.DispatcherServlet [] - Completed initialization in 5 ms
+23:40:29.847 [http-nio-8083-exec-4] INFO  o.s.api.AbstractOpenApiResource [7eb7923f-5320-4ef4-ada5-2806fe9f3a3c] - Init duration for springdoc-openapi is: 956 ms
+23:41:14.895 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown [] - Commencing graceful shutdown. Waiting for active requests to complete
+23:41:15.067 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown [] - Graceful shutdown complete
+23:41:15.076 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Closing JPA EntityManagerFactory for persistence unit 'default'
+23:41:15.087 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown initiated...
+23:41:15.144 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown completed.
+23:41:27.932 [restartedMain] INFO  a.s.ServicioProgresoApplication [] - Starting ServicioProgresoApplication using Java 17.0.0.1 with PID 20432 (C:\laragon\www\academia_digital\servicio_progreso\target\classes started by David in C:\laragon\www\academia_digital)
+23:41:27.966 [restartedMain] DEBUG a.s.ServicioProgresoApplication [] - Running with Spring Boot v3.5.8, Spring v6.2.14
+23:41:27.969 [restartedMain] INFO  a.s.ServicioProgresoApplication [] - The following 1 profile is active: "dev"
+23:41:28.143 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+23:41:28.144 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+23:41:31.080 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+23:41:31.294 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [] - Finished Spring Data repository scanning in 186 ms. Found 1 JPA repository interface.
+23:41:31.985 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope [] - BeanFactory id=f886516f-d251-3c05-a8a8-a6c02a812722
+23:41:33.543 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer [] - Tomcat initialized with port 8083 (http)
+23:41:33.578 [restartedMain] INFO  o.a.catalina.core.StandardService [] - Starting service [Tomcat]
+23:41:33.579 [restartedMain] INFO  o.a.catalina.core.StandardEngine [] - Starting Servlet engine: [Apache Tomcat/10.1.49]
+23:41:33.793 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [] - Initializing Spring embedded WebApplicationContext
+23:41:33.795 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [] - Root WebApplicationContext: initialization completed in 5646 ms
+23:41:33.964 [restartedMain] DEBUG a.s.config.LogginFilter [] - Filter 'logginFilter' configured for use
+23:41:34.426 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper [] - HHH000204: Processing PersistenceUnitInfo [name: default]
+23:41:34.627 [restartedMain] INFO  org.hibernate.Version [] - HHH000412: Hibernate ORM core version 6.6.36.Final
+23:41:34.753 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator [] - HHH000026: Second-level cache disabled
+23:41:35.616 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo [] - No LoadTimeWeaver setup: ignoring JPA class transformer
+23:41:35.705 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Starting...
+23:41:36.372 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool [] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@675adacd
+23:41:36.377 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Start completed.
+23:41:36.641 [restartedMain] INFO  o.hibernate.orm.connections.pooling [] - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.30
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+23:41:38.778 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator [] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+23:41:38.901 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+23:41:40.132 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+23:41:41.504 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer [] - LiveReload server is running on port 35729
+23:41:41.967 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer [] - Tomcat started on port 8083 (http) with context path '/'
+23:41:42.260 [restartedMain] INFO  a.s.ServicioProgresoApplication [] - Started ServicioProgresoApplication in 17.227 seconds (process running for 19.491)
+23:44:15.846 [http-nio-8083-exec-3] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:44:15.848 [http-nio-8083-exec-3] INFO  o.s.web.servlet.DispatcherServlet [] - Initializing Servlet 'dispatcherServlet'
+23:44:15.853 [http-nio-8083-exec-3] INFO  o.s.web.servlet.DispatcherServlet [] - Completed initialization in 2 ms
+23:44:17.514 [http-nio-8083-exec-4] INFO  o.s.api.AbstractOpenApiResource [52fcc730-a239-4eda-8afb-b114b18aae6b] - Init duration for springdoc-openapi is: 964 ms
+23:53:49.049 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown [] - Commencing graceful shutdown. Waiting for active requests to complete
+23:53:49.199 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown [] - Graceful shutdown complete
+23:53:49.210 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Closing JPA EntityManagerFactory for persistence unit 'default'
+23:53:49.223 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown initiated...
+23:53:49.252 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown completed.
+23:54:02.629 [restartedMain] INFO  a.s.ServicioProgresoApplication [] - Starting ServicioProgresoApplication using Java 17.0.0.1 with PID 21124 (C:\laragon\www\academia_digital\servicio_progreso\target\classes started by David in C:\laragon\www\academia_digital)
+23:54:02.663 [restartedMain] DEBUG a.s.ServicioProgresoApplication [] - Running with Spring Boot v3.5.8, Spring v6.2.14
+23:54:02.667 [restartedMain] INFO  a.s.ServicioProgresoApplication [] - The following 1 profile is active: "dev"
+23:54:02.834 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+23:54:02.835 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+23:54:06.081 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+23:54:06.324 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [] - Finished Spring Data repository scanning in 206 ms. Found 1 JPA repository interface.
+23:54:07.116 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope [] - BeanFactory id=f886516f-d251-3c05-a8a8-a6c02a812722
+23:54:08.956 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer [] - Tomcat initialized with port 8083 (http)
+23:54:09.005 [restartedMain] INFO  o.a.catalina.core.StandardService [] - Starting service [Tomcat]
+23:54:09.006 [restartedMain] INFO  o.a.catalina.core.StandardEngine [] - Starting Servlet engine: [Apache Tomcat/10.1.49]
+23:54:09.281 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [] - Initializing Spring embedded WebApplicationContext
+23:54:09.284 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [] - Root WebApplicationContext: initialization completed in 6447 ms
+23:54:09.459 [restartedMain] DEBUG a.s.config.LogginFilter [] - Filter 'logginFilter' configured for use
+23:54:09.964 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper [] - HHH000204: Processing PersistenceUnitInfo [name: default]
+23:54:10.155 [restartedMain] INFO  org.hibernate.Version [] - HHH000412: Hibernate ORM core version 6.6.36.Final
+23:54:10.301 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator [] - HHH000026: Second-level cache disabled
+23:54:11.368 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo [] - No LoadTimeWeaver setup: ignoring JPA class transformer
+23:54:11.462 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Starting...
+23:54:12.210 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool [] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ffdfa3e
+23:54:12.218 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Start completed.
+23:54:12.511 [restartedMain] INFO  o.hibernate.orm.connections.pooling [] - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.30
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+23:54:14.779 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator [] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+23:54:14.903 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+23:54:16.246 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+23:54:17.870 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer [] - LiveReload server is running on port 35729
+23:54:18.413 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer [] - Tomcat started on port 8083 (http) with context path '/'
+23:54:18.754 [restartedMain] INFO  a.s.ServicioProgresoApplication [] - Started ServicioProgresoApplication in 19.663 seconds (process running for 21.975)
+23:54:21.206 [http-nio-8083-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:54:21.208 [http-nio-8083-exec-1] INFO  o.s.web.servlet.DispatcherServlet [] - Initializing Servlet 'dispatcherServlet'
+23:54:21.213 [http-nio-8083-exec-1] INFO  o.s.web.servlet.DispatcherServlet [] - Completed initialization in 4 ms
+23:54:22.373 [http-nio-8083-exec-3] INFO  o.s.api.AbstractOpenApiResource [7c8a1671-90cc-4b1a-b7b5-9eb969b77ba0] - Init duration for springdoc-openapi is: 733 ms
+23:56:12.911 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown [] - Commencing graceful shutdown. Waiting for active requests to complete
+23:56:13.074 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown [] - Graceful shutdown complete
+23:56:13.084 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Closing JPA EntityManagerFactory for persistence unit 'default'
+23:56:13.111 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown initiated...
+23:56:13.146 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown completed.
