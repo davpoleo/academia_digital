@@ -8,4 +8,5 @@ import java.util.Optional;
 
 public interface ProgressRepository extends JpaRepository<Progress, Long>, JpaSpecificationExecutor<Progress> {
     Optional<Progress> findByStudentIdAndCourseId(Long studentId, Long courseId);
+    Optional<Progress> findByStudentId(Long studentId);
 }

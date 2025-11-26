@@ -82,7 +82,7 @@ public class CourseController {
     }
 
     //ENROLLMENT ENDPOINTS
-    @Operation(summary = "Inscribir un Estudiante a un curso")
+    @Operation(summary = "Realiza una inscripcion a un curso")
     @ApiResponse(responseCode = "201", description = "Inscripcion exitosa")
     @ApiResponse(responseCode = "409", description = "Error en las inscripcion")
     @PostMapping(ApiConstants.CONTROLLER_MAP_ENROLLMENT)
@@ -93,7 +93,7 @@ public class CourseController {
         return new ResponseEntity<>(enrollment, HttpStatus.CREATED);
     }
 
-    @Operation(summary = "Elimina un estudiante por Id")
+    @Operation(summary = "Elimina una inscrpcion por Id de curso y estudiante")
     @ApiResponse(responseCode = "204", description = "Estudiante eliminado exitosamente")
     @ApiResponse(responseCode = "404", description = "Id para eliminacion no encontrado")
     @DeleteMapping(ApiConstants.CONTROLLER_MAP_ENROLLMENT_DELETE)

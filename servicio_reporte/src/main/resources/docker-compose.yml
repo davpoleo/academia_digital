@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  # Nombre del servicio de la base de datos
+  db:
+    # Imagen de MySQL a usar (la versión 8 es común)
+    image: mysql:8.0
+    # Configuración de los puertos: 'host_port:container_port'
+    # Esto permite que tu aplicación de Spring Boot se conecte a 'localhost:3306'
+    ports:
+      - "3306:3306"
+    # Variables de entorno para configurar MySQL
+    environment:
+      # La contraseña de 'root' (debe coincidir con la de tu archivo application.yml)
+      MYSQL_ROOT_PASSWORD: asd123asd
+      # Nombre de la base de datos que se creará automáticamente al iniciar
+      # Esto debe coincidir con el nombre en tu URL de Spring Boot
+      MYSQL_DATABASE: db_reportes_dev
+    # Montar un volumen para la persistencia de datos (opcional, pero recomendado)
+    # Esto asegura que los datos no se pierdan al detener/reiniciar el contenedor
+    volumes:
+      - mysql_data:/var/lib/mysql
+    # Reiniciar el contenedor automáticamente si se detiene (a menos que se detenga manualmente)
+    restart: always
+
+# Definición de los volúmenes
+volumes:
+  mysql_data:

@@ -6,8 +6,8 @@ import academiadigital.servicio_progreso.dto.ProgressResponseDto;
 import java.util.List;
 
 public interface ProgressService {
-    ProgressResponseDto getProgressByStudentId(ProgressRequestDto requestDto);
+    ProgressResponseDto getProgressByStudentId(Long studentId);
     List<ProgressResponseDto> getAllProgress();
     ProgressResponseDto CreateOrUpdateProgress(ProgressRequestDto requestDto);
-    void deleteProgress(Long studentId);
+    void deleteProgress(Long courseId, Long studentId);
 }

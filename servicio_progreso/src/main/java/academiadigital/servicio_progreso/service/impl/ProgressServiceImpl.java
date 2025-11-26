@@ -21,6 +21,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 @Slf4j
@@ -34,19 +35,26 @@ public class ProgressServiceImpl implements ProgressService {
 
     @Override
     @Transactional(readOnly = true)
-    public ProgressResponseDto getProgressByStudentId(ProgressRequestDto requestDto) {
-        return null;
+    public ProgressResponseDto getProgressByStudentId(Long studentId) {
+        log.info("Realizando busqueda de progreso por Id de estudiante: {}", studentId);
+        Progress searchProgressByStudentId = progressRepository.findByStudentId(studentId)
+                .orElseThrow(()-> new ResourceNotFoundException(ApiConstants.BUSINESS_ERR_ID_NOT_FOUND));
+        log.info("Progreso de estudiante  {} encontrado", studentId);
+        return progressMapper.mapToProgressDto(searchProgressByStudentId);
     }
 
     @Override
     public List<ProgressResponseDto> getAllProgress() {
-        return List.of();
+        log.info("Realizando busqueda de todos el progreso academico registrado");
+        return progressRepository.findAll().stream()
+                .map(progressMapper::mapToProgressDto)
+                .collect(Collectors.toList());
     }
 
     @Override
     public ProgressResponseDto CreateOrUpdateProgress(ProgressRequestDto requestDto) {
         try {
-            log.info("Verificando existencia de curso con ID: {}", requestDto.courseId());
+            log.info("Consultando existencia de curso con ID: {}", requestDto.courseId());
             CourseResponseDto courseResponseDto = courseFeingClient.getCourseById(requestDto.courseId());
             log.info("Curso con ID: {} encontrado", requestDto.courseId());
         } catch (FeignException.NotFound error) {
@@ -55,7 +63,7 @@ public class ProgressServiceImpl implements ProgressService {
         }
 
         try {
-            log.info("Verificando existencia de estudiante con ID: {}", requestDto.studentId());
+            log.info("Consultando existencia de estudiante con ID: {}", requestDto.studentId());
             StudentResponseDto studentResponseDto = studentFeingClient.getStudenById(requestDto.studentId());
             log.info("Estudiante con ID: {} encontrado", requestDto.studentId());
         } catch (Exception e) {
@@ -89,8 +97,15 @@ public class ProgressServiceImpl implements ProgressService {
     }
 
     @Override
-    public void deleteProgress(Long studentId) {
-
+    public void deleteProgress(Long courseId, Long studentId) {
+        log.info("Intentando eliminar progreso de Estudiante ID: {} del Curso ID: {}", studentId, courseId);
+        Optional<Progress> progressCheck = progressRepository.findByStudentIdAndCourseId(studentId, courseId);
+        if (progressCheck.isEmpty()){
+            log.warn("Inscripción no encontrada para Estudiante ID: {} y Curso ID: {}", studentId, courseId);
+            throw new ResourceNotFoundException(ApiConstants.BUSINESS_ERR_ID_NOT_FOUND);
+        }
+        log.info("Inscripción eliminada exitosamente.");
+        progressRepository.delete(progressCheck.get());
     }
 
     // OLD_CODE

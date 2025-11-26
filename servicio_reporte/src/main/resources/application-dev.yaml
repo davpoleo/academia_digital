@@ -1,6 +1,6 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/db_progreso_dev?serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/db_reportes_dev?serverTimezone=UTC
     username: root
     password:
